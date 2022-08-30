@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        Ginish's Task
+    </title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.8/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app1">
+        <label for="name">Please Enter Your Name: </label>
+        <input type="text">
+        <br><br>
+        <label for="password">Enter Password: </label>
+        <input type="password">
+        <br><br>
+        <label for="email">Enter Your Email: </label>
+        <input type="text" v-model="message1">
+        <br><br>
+        <button>
+            Submit Details
+        </button>
+        <br><br>
+        {{message}}
+        <br>
+        <br>
+        <input type="checkbox" value= "My PC" v-model="checkedvalues">
+        <label for="mypc">My PC</label>
+        <input type="checkbox" value= "Keyboard" v-model="checkedvalues">
+        <label for="">Keyboard</label>
+        <input type="checkbox" value= "Mouse" v-model="checkedvalues">
+        <label for="">Mouse</label>
+        <input type="checkbox" value= "Misc" v-model="checkedvalues">
+        <label for="">Misc</label>
+        <br><br>
+        The Selected Values are: {{checkedvalues}}
+        <br><br>
+
+        <select name="" id="" v-model="selected">
+            <option value="A">A</option>
+            <option value="B">B</option>
+        </select>
+        <br><br>
+        The Selected Value is: {{selected}}
+        <br><br>
+        <select name="" id="" v-model="DynamicSelect">
+            <option v-for="num in list" v-bind:value="num">{{num}}</option>
+        </select>
+        <br><br>
+        The Selected Value is: {{DynamicSelect}}
+        <br><br>
+        The age of the person:
+        <input type="text" v-model.number.lazy="age">
+        <br><br>
+        The Calculated Age is: {{calculate}}
+    </div>
+    <script>
+       new Vue({
+        el: "#app1",
+        data() {
+            return {
+                age: 0,
+                message1: "example@gmail.com",
+                checkedvalues: [],
+                selected: "",
+                DynamicSelect: "",
+                list: (1,6)
+            }
+        },
+        computed: {
+            calculate(){
+                return this.age + 10;
+            }
+        }
+       })
+    </script>
+</body>
+</html>
