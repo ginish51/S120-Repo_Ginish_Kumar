@@ -1,0 +1,14 @@
+h1 {
+    color: red;
+}
+h2 {
+    width: 380px; color: blue;
+}
+
+p {
+    text-align: stretch;
+    background-color: aqua;font-size: xx-large;
+}
+body{
+    text-align: center;
+}
