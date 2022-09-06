@@ -1,14 +1,23 @@
 h1 {
+    font-size:4vw;
     color: red;
 }
 h2 {
-    width: 380px; color: blue;
+    color: blue;
 }
 
 p {
+    font-size: 1vw;
     text-align: stretch;
     background-color: aqua;font-size: xx-large;
 }
 body{
     text-align: center;
+}
+.bd{
+    width: 100%;
+    height: auto;
+}
+.link{
+    font-size: auto;
 }
