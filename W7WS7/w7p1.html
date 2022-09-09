@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+  <title>Week7 Task 1</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.7.8/dist/vue.js"></script>
+  <style>
+    .componenta {
+      display:block;
+      background-color: aquamarine;
+      font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+      font-size: 60%;
+      text-align: center;
+      scroll-padding: 4em;
+    }
+    .componentb {
+      display:block;
+      background-color:aqua;
+      font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      font-size: 60%;
+      text-align: center;
+      scroll-padding: 4em;
+    }
+  </style>
+</head>
+<body>
+  <div id="app">
+    {{message}}
+    <div class="componenta">
+      <component-a></component-a>
+    </div>
+    <div class="componentb">
+      <component-b></component-b>
+    </div>
+  </div>
+
+<script>
+  let ComponentB = {
+    data() {
+      return {
+        componentBmessage: "Hello this is message from locally registered component."
+      }
+    },
+    template: '<h1>{{componentBmessage}}</h1>' 
+  }
+  Vue.component('component-a',{
+    data(){
+      return {
+        componentamessage: "hello This is a message from Global Component"
+      }
+    },
+    template: '<h1>{{componentamessage}}</h1>'
+  })
+  new Vue({
+    el: "#app",
+    data() {
+      return {
+        message: "Hi this is a normal message"
+      }
+    },
+    components: {
+      ComponentB
+    }
+  })
+</script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<title>
+    Hello World
+</title>
+<body>
+    <div id="hello_world">
+    <h1>{{msg}}</h1>
+    </div>
+    <div id="hi1" >
+        <h1><b><i>{{msg1}}</i></b></h1>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.8/dist/vue.js"></script>
+    <script src="p11.js"></script>
+    <script>
+    var app= new Vue(
+        {
+        el: "#hi1", 
+        data:
+        {
+            msg1:"Hello World 1..."
+        }
+        })
+    </script>
+</body>
+</html>
