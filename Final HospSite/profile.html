@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>HospSite||WHA</title>
+    <link rel="shortcut icon" href="image/hospicon.jpg">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="script.js"></script>
+</head>
+<div class="navbar">
+    <a href="HospHome.html">Home</a>
+    <a href="departmentpage.html">Our Departments</a>
+    <a class="current" href="profile.html">Select Who You Are</a>
+    <a href="login.html">Login</a> 
+    <a href="about.html">About</a>
+</div>
+<body  style="background-color: #C78969">
+<center>
+    <br>
+    <br>
+    
+    <div id="app"> 
+        <img src="image/dpn.jpg" alt="image" style="width:450px;height:300px;" class="sitelogo"/>
+        <div>
+            <button @click="showData = !showData">Have Some updates? Click Here!</button>
+        </div>
+        <transition enter-active-class="animate__animated animate__fadeIn" leave-active-class="animate__animated animate__fadeOutUp">
+            <div v-if="showData">
+                <p2>Let us know Who you are.</p2><br><br>
+                <p2>Select One</p2><br><br>
+                <select name="" id="" v-model="proftype">
+                    <option value="Doctor">Doctor</option>
+                    <option value="Patient">Patient</option>
+                    <option value="Nurse">Nurse</option>
+                </select><br><br>
+                <p2>Verify Password to Change Account Type:</p2>
+                <input v-model="password" type="password" placeholder="Verify Password"/><br><br>
+                <p2>Once you press Confirm, your account type will be changed to {{proftype}} and you cant change it for next 30 days.</p2>
+                <button type="button" class="button" onclick="almessage()">Confirm</button>
+            </div>
+        </transition>        
+    </div>
+</center>
+<script>
+    function almessage()
+    {
+        alert("Your Account Type is now changed.")
+    }
+    new Vue({
+        el:"#app",
+        data() {
+            return {
+                proftype:"",
+                showData:false,
+            }
+        },
+    })
+</script>
+<div class="popup" onclick="myFunction()">
+    <button>Change Layout</button>
+    <span class="popuptext" id="myPopup">
+        <p2>Background Colour Customisation</p2>
+        <input type="color" id="bgChoice" name="bgChoice" value="#d5dce2" onchange="bgChange()">
+        <br>
+        <br>
+        <button onclick="resetDefault()">Default Colour</button></span>
+  </div>
+</body>
+</html>

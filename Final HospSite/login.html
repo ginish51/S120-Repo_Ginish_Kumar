@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>HospSite||Login</title>
+    <link rel="shortcut icon" href="image/hospicon.jpg">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+</head>
+
+<body  style="background-color: #C78969">
+    <div class="navbar">
+        <a href="HospHome.html">Home</a>
+        <a href="departmentpage.html">Our Departments</a>
+        <a href="profile.html">Select Who You Are</a>
+        <a class="current" href="login.html">Login</a>
+        <a href="about.html">About</a>
+    </div>
+
+    <center>
+        <figure>
+            <img src="image/hplogin.png" alt="sitelogo" style="width:180px;height:180px;" class="sitelogo">
+        </figure>
+
+        <br>
+        <div id="app">
+            <p2>Username: </p2>
+            <input type="email" v-model="text" placeholder="Registered Email" /><br>
+            <p2>Password: </p2>
+            <input v-model="password" type="password" placeholder="Password" /><br><br>
+            <button type="button" class="button" onclick="notfound()">Login</button> <br><br>
+            <button @click="showData = !showData">New User? We just need a few seconds of yours.</button>
+            <transition enter-active-class="animate__animated animate__fadeIn" leave-active-class="animate__animated animate__fadeOutUp">
+                <div v-if="showData">
+
+                    <p2>Title:</p2>
+                    <select name="" id="" v-model="selected">
+                        <option value="Selected Title"></option>
+                        <option value="MR.">MR.</option>
+                        <option value="MISS.">MISS.</option>
+                        <option value="MRS.">MRS.</option>
+                    </select>
+                    <br><br>
+                    <p2>Name: </p2>
+                    <p2>{{selected}}</p2>
+                    <input v-model="name" type="text" placeholder="Please enter your full name:" /><br><br>
+                    <p2>Date of Birth: </p2>
+                    <input type="date" /><br><br>
+                    <p2>Phone Number: </p2>
+                    <input type="tel" v-model="phonenum" placeholder="Please enter your phone number" /><br><br>
+                    <p2>E-mail: </p2>
+                    <input type="email" v-model="mailid" placeholder="example@deakin.edu.au" /><br><br>
+
+                    <p2>Password</p2><br>
+                    <input v-model="password" type="password" placeholder="Enter a Strong Password" /><br><br>
+                    <button type="button" class="button" onclick="showMessage()">Submit Details</button><br><br>
+                </div>
+            </transition>
+        </div>
+    </center>
+    <script>
+        function notfound() {
+            alert("Sorry, We Couldn't find any user with these details. Please Try using other details or SignUp.")
+        }
+        function showMessage() {
+            alert("Thanks For your details. We have sent a confirmation mail to the email you entered. You can now access your account within 10 Minutes.");
+        }
+        new Vue({
+            el: "#app",
+            data() {
+                return {
+                    selected: "",
+                    mailid: "",
+                    showData:false,
+                }
+            },
+        })
+    </script>
+    <div class="popup" onclick="myFunction()">
+        <button>Change Layout</button>
+        <span class="popuptext" id="myPopup">
+            <p2>Background Colour Customisation</p2>
+            <input type="color" id="bgChoice" name="bgChoice" value="#d5dce2" onchange="bgChange()">
+            <br>
+            <br>
+            <button onclick="resetDefault()">Default Colour</button></span>
+      </div>
+</body>
+
+</html>
+<script src="script.js"></script>

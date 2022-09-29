@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Deakin||HospSite</title>
+    <link rel="shortcut icon" href="image/hospicon.jpg">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="script.js"></script>
+</head>
+
+<body style="background-color: #C78969;">
+    <div class="navbar">
+        <a class="current" href="HospHome.html">Home</a>
+        <a href="departmentpage.html">Our Departments</a>
+        <a href="profile.html">Select Who You Are</a>
+        <a href="login.html">Login</a>
+        <a href="about.html">About</a>
+    </div>
+    <div>
+        <figure>
+            <img src="image/hospicon.jpg" alt="HospSite" style="width:300px;height:200px; float: left;"
+                class="sitelogo">
+        </figure>
+        <h1 style="float:inline-end ;">Not feeling well?<br>
+            You have chosen the correct Platform :)<br>
+            Your Health is Our Priority</h1><br><br><br><br>
+    </div>
+    <br>
+    <center>
+        <div class="row">
+            <div class="column">
+                <figure>
+                    <a href="departmentpage.html">
+                        <img src="image/hpdept.jpg" alt=Departments width="auto" height="auto">
+                        <figcaption>Our Departments</figcaption>
+                    </a>
+                </figure>
+                <figure>
+                    <a href="profile.html">
+                        <img src="image/dpn.jpg" alt=Departments width="auto" height="auto">
+                        <figcaption>Who You are?</figcaption>
+                    </a>
+                </figure>
+            </div>
+            <div class="column">
+                <figure>
+                    <a href="login.html">
+                        <img src="image/hplogin.jpg" alt=Departments width="auto" height="auto">
+                        <figcaption>Login Here</figcaption>
+                    </a>
+                </figure>
+                <figure>
+                    <a href="about.html">
+                        <img src="image/hpabout.jpg" alt=Departments width="auto" height="auto">
+                        <figcaption>About Us</figcaption>
+                    </a>
+                </figure>
+            </div>
+        </div>
+    </center>
+    <div class="popup" onclick="myFunction()">
+        <button>Change Layout</button>
+        <span class="popuptext" id="myPopup">
+            <p2>Background Colour Customisation</p2>
+            <input type="color" id="bgChoice" name="bgChoice" value="#d5dce2" onchange="bgChange()">
+            <br>
+            <br>
+            <button onclick="resetDefault()">Default Colour</button>
+        </span>
+    </div>
+</body>
+<script>
+</script>
+
+</html>

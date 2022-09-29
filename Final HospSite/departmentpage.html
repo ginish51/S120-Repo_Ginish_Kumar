@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>HospSite||Departments</title>
+    <link rel="shortcut icon" href="image/hospicon.jpg">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="script.js"></script>
+</head>
+
+<body style="background-color: #C78969">
+    <div class="navbar">
+        <a href="HospHome.html">Home</a>
+        <a class="current" href="departmentpage.html">Our Departments</a>
+        <a href="profile.html">Select Who You Are</a>
+        <a href="login.html">Login</a>
+        <a href="about.html">About</a>
+    </div>
+    <center>
+        <div class="row">
+            <div class="column">
+                <figure>
+                    <img src="image/dept1.jpg" alt=Departments width="auto" height="auto">
+                    <figcaption>Yes, We have Heart Care Center</figcaption>
+                </figure>
+                <figure>
+                    <img src="image/dept2.jpg" alt=Departments width="auto" height="auto">
+                    <figcaption>We Love Taking Care of little babies.</figcaption>
+                </figure>
+            </div>
+            <div class="column">
+                <figure>
+                    <img src="image/dept3.jpg" alt=Departments width="auto" height="auto">
+                    <figcaption>We care for you and your child to be.</figcaption>
+                </figure>
+                <figure>
+                    <img src="image/dept4.jpg" alt=Departments width="auto" height="auto">
+                    <figcaption>Our Specialists in Psychology are here for you.</figcaption>
+                </figure>
+            </div>
+            <div class="column">
+                <figure>
+                    <img src="image/dept5.jpg" alt=Departments width="auto" height="auto">
+                    <figcaption>We protect you precious smile.</figcaption>
+                </figure>
+                <figure>
+                    <img src="image/dept6.jfif" alt=Departments width="auto" height="auto">
+                    <figcaption>Gynae Specialists also available</figcaption>
+                </figure>
+            </div>
+            <div class="column">
+                <figure>
+                    <img src="image/dept7.jpg" alt=Departments width="auto" height="auto">
+                    <figcaption>A bone got broken in accident? Don't Worry, We will fix it.</figcaption>
+                </figure>
+                <figure>
+                    <img src="image/dept8.jfif" alt=Departments width="auto" height="auto">
+                    <figcaption>Don't Let your stomack ache. Come meet our Gastroanterologist.</figcaption>
+                </figure>
+            </div>
+        </div>
+    </center>
+    <div class="popup" onclick="myFunction()">
+        <button>Change Layout</button>
+        <span class="popuptext" id="myPopup">
+            <p2>Background Colour Customisation</p2>
+            <input type="color" id="bgChoice" name="bgChoice" value="#d5dce2" onchange="bgChange()">
+            <br>
+            <br>
+            <button onclick="resetDefault()">Default Colour</button>
+        </span>
+    </div>
+
+</body>
+
+</html>
